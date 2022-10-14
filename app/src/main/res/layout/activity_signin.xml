@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Signing"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/Signup"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right"
+            android:paddingLeft="15dp"
+            android:text="Sign Up"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginTop="-20dp"
+            app:srcCompat="@drawable/main_logo" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="-20dp"
+            android:text="Musify"
+            android:textColor="#FFFFFF"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btn2"
+            android:ems="10"
+            android:textColor="#DCB439"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:textColorHint="#DCB439"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btn2"
+            android:ems="10"
+            android:hint="Password"
+            android:textColorHint="#DCB439"
+            android:inputType="textPassword"
+            android:text=""
+            android:padding="15dp"
+            android:textColor="#DCB439"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/Sign"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/btn_bg"
+            android:layout_marginTop="60dp"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+
+        <TextView
+            android:id="@+id/forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="20dp"
+            android:editable="false"
+            android:textSize="17dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Forgot Your Password?"
+            android:textColor="#DCB439"
+            tools:ignore="Deprecated" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

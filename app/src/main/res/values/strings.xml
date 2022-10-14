@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">I190504</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="facebook_app_id">1156548918593112</string>
+    <string name="fb_login_protocol_scheme">fb1156548918593112</string>
+    <string name="facebook_client_token">731ddefe66b708f4155ee7d233343bf9</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app2_name">Navigation Drawer</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+</resources>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".sign_up">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="-15dp"
+            android:layout_marginTop="-10dp"
+            app:srcCompat="@drawable/main_logo" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="-10dp"
+            android:paddingLeft="10dp"
+            android:text="Musify"
+            android:textColor="#FFFFFF"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+
+
+
+
+
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/btn2"
+                android:ems="10"
+                android:hint="Enter your Email"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"
+                android:textColor="#DCB439"
+                android:textColorHint="#DCB439"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+
+
+
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/btn2"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:text=""
+                android:textColor="#DCB439"
+                android:textColorHint="#DCB439"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/btnlogin"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/btn_bg"
+                android:hint="Sign IN"
+                android:gravity="center"
+                android:editable="false"
+                android:textAllCaps="false"
+                android:textColorHint="@color/white"
+                android:textSize="25dp" />
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/Gender"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="10dp"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:text="Gender"-->
+        <!--            android:textColor="#DCB439"-->
+        <!--            android:textSize="20sp"-->
+        <!--            android:textStyle="bold" />-->
+
+        <!--        <RadioGroup-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="130dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:orientation="horizontal">-->
+
+
+
+        <!--                <RadioButton-->
+        <!--                    android:id="@+id/male"-->
+        <!--                    android:layout_width="100dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_marginTop="-10dp"-->
+        <!--                    android:background="@drawable/radio_selector"-->
+        <!--                    android:button="@android:color/transparent"-->
+        <!--                    android:textColor="@drawable/text_color" />-->
+
+        <!--                <ImageView-->
+        <!--                    android:layout_width="90dp"-->
+        <!--                    android:layout_height="90dp"-->
+        <!--                    android:layout_marginStart="-95dp"-->
+        <!--                    android:layout_marginTop="-10dp"-->
+        <!--                    android:src="@drawable/male" />-->
+
+
+
+
+        <!--                <RadioButton-->
+        <!--                    android:id="@+id/female"-->
+        <!--                    android:layout_width="100dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_marginStart="30dp"-->
+        <!--                    android:layout_marginTop="-10dp"-->
+        <!--                    android:background="@drawable/radio_selector"-->
+        <!--                    android:button="@android:color/transparent"-->
+        <!--                    android:textColor="@drawable/text_color" />-->
+
+        <!--                <ImageView-->
+        <!--                    android:layout_width="90dp"-->
+        <!--                    android:layout_height="90dp"-->
+        <!--                    android:layout_marginStart="-95dp"-->
+        <!--                    android:layout_marginTop="-10dp"-->
+        <!--                    android:src="@drawable/female" />-->
+
+
+        <!--                <RadioButton-->
+        <!--                    android:id="@+id/unspecify"-->
+        <!--                    android:layout_width="100dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_marginStart="30dp"-->
+        <!--                    android:layout_marginTop="-10dp"-->
+        <!--                    android:background="@drawable/radio_selector"-->
+        <!--                    android:button="@android:color/transparent"-->
+        <!--                    android:textColor="@drawable/text_color" />-->
+
+        <!--                <ImageView-->
+        <!--                    android:layout_width="90dp"-->
+        <!--                    android:layout_height="90dp"-->
+        <!--                    android:layout_marginStart="-95dp"-->
+        <!--                    android:layout_marginTop="-10dp"-->
+        <!--                    android:src="@drawable/unspecify" />-->
+
+
+
+        <!--        </RadioGroup>-->
+
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="-10dp"-->
+        <!--            android:layout_marginTop="-10dp"-->
+        <!--            android:orientation="horizontal">-->
+
+        <!--            <CheckBox-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="10dp"-->
+        <!--                android:layout_marginTop="5dp"-->
+        <!--                android:text="I would like to recieve your newsletter and other promotional information."-->
+        <!--                android:buttonTint="@color/white"-->
+        <!--                android:textColor="@drawable/text_color" />-->
+
+
+        <!--        </LinearLayout>-->
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
