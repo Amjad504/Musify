@@ -10,14 +10,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-<<<<<<< HEAD
         android:layout_margin="20dp"
-=======
+
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
->>>>>>> 8bc0655 (Version 1)
         android:orientation="vertical">
 
 
@@ -50,22 +48,16 @@
             android:textSize="35sp"
             android:textStyle="bold" />
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 8bc0655 (Version 1)
+
+
         <Button
             android:id="@+id/Facebook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
             android:background="@drawable/btn2"
             android:layout_marginTop="50dp"
-=======
-            android:layout_marginTop="50dp"
-            android:background="@drawable/btn2"
->>>>>>> 8bc0655 (Version 1)
             android:drawableLeft="@drawable/ic_facebook"
             android:text="Continue with FaceBook"
             android:textColor="#193AB5"
@@ -90,23 +82,15 @@
             android:id="@+id/Account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
             android:background="@drawable/btn2"
             android:layout_marginTop="40dp"
-=======
-            android:layout_marginTop="40dp"
-            android:background="@drawable/btn2"
->>>>>>> 8bc0655 (Version 1)
             android:text="Create Account"
             android:textColor="#DCB439"
             android:textSize="16sp"
             android:textStyle="bold" />
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 8bc0655 (Version 1)
     </LinearLayout>
 
 
