@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,9 +32,9 @@ public class PhoneVerification extends AppCompatActivity {
 
 
     EditText Number;
-    EditText Generatebtn;
+    TextView Generatebtn;
     EditText Verificationcode;
-    EditText Verifybtn;
+    TextView Verifybtn;
     FirebaseAuth mAuth;
     String number;
     String VerificationID;
@@ -49,9 +50,9 @@ public class PhoneVerification extends AppCompatActivity {
 
 
         Number = (EditText) findViewById(R.id.number);
-        Generatebtn = (EditText) findViewById(R.id.genOTP);
+        Generatebtn = (TextView) findViewById(R.id.genOTP);
         Verificationcode = (EditText) findViewById(R.id.code);
-        Verifybtn = (EditText) findViewById(R.id.verifyOTP);
+        Verifybtn = (TextView) findViewById(R.id.verifyOTP);
         mAuth = FirebaseAuth.getInstance();
         bar = findViewById(R.id.bar);
         database = FirebaseDatabase.getInstance();

@@ -73,6 +73,7 @@
 
             <EditText
                 android:id="@+id/number"
+                android:maxLength="10"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -87,13 +88,14 @@
                 android:textStyle="bold" />
 
 
-            <EditText
+            <TextView
                 android:id="@+id/genOTP"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/btn_bg"
                 android:hint="Generate OTP"
+                android:clickable="true"
                 android:textColorHint="@color/white"
                 android:gravity="center"
                 android:editable="false"
@@ -118,7 +120,7 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-            <EditText
+            <TextView
                 android:visibility="invisible"
                 android:enabled="false"
                 android:id="@+id/verifyOTP"

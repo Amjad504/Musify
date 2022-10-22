@@ -13,6 +13,9 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,6 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -37,6 +41,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -48,24 +54,97 @@ public class Home extends Fragment {
     DatabaseReference databaseReference;
     FirebaseAuth mAuth;
     String Name;
+    int position;
     String uid;
     Uri uri;
+    SwipeRefreshLayout swiper,swiper2;
+    RecyclerView rv;
+
+    AdapterSong adapter;
 
     FirebaseDatabase firebaseDatabase;
     private static final String USERS = "users";
     TextView name;
     CircleImageView profile;
+    List ls;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
 
+        ls = ((MyApplication) getActivity().getApplication()).getLs();
+
+
         imageView = view.findViewById(R.id.imageView);
         drawerLayout = view.findViewById(R.id.drawer);
         navigationView = view.findViewById(R.id.nav);
+        swiper2 = view.findViewById(R.id.swiper2);
+        swiper = view.findViewById(R.id.swiper);
         name = navigationView.getHeaderView(0).findViewById(R.id.profilename);
         profile = navigationView.getHeaderView(0).findViewById(R.id.profilepic);
+
+
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            position = bundle.getInt("pos", 0);
+        }
+
+
+        swiper.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                adapter.notifyDataSetChanged();
+                adapter.notifyItemRemoved(position);
+                swiper.setRefreshing(false);
+            }
+        });
+
+        swiper2.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                adapter.notifyDataSetChanged();
+                adapter.notifyItemRemoved(position);
+                swiper.setRefreshing(false);
+            }
+        });
+
+//
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference Ref = database.getReference("Songs").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+
+        Ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                ls.clear();
+                for(DataSnapshot ds : snapshot.getChildren()) {
+                    String Idd= ds.getKey();
+                    String x = ds.child("title").getValue(String.class);
+                    String y = ds.child("uri").getValue(String.class);
+                    ls.add(new SongModel(Idd,x,y,ds.child("artist")
+                            .getValue(String.class),null,ds.child("album")
+                            .getValue(String.class),ds.child("track")
+                            .getValue(String.class)));
+                }
+            }
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                throw error.toException();
+
+            }
+        });
+
+
+
+        rv = view.findViewById(R.id.ARV);
+        adapter = new AdapterSong(ls, getActivity());
+        RecyclerView.LayoutManager lm = new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false);
+        rv.setLayoutManager(lm);
+        rv.setAdapter(adapter);
+
+
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -82,7 +161,7 @@ public class Home extends Fragment {
                 final FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference ref = database.getReference("users");
 
-                ref.orderByChild("mail").equalTo(FirebaseAuth.getInstance().getCurrentUser().getEmail()).addListenerForSingleValueEvent(new ValueEventListener() {
+                ref.orderByChild("number").equalTo(FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber()).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         for(DataSnapshot ds : snapshot.getChildren()) {
@@ -137,21 +216,15 @@ public class Home extends Fragment {
                 manager.beginTransaction().replace(R.id.container,songDisplay).commit();
             }
         });
-        LinearLayout song = (LinearLayout) view.findViewById(R.id.song);
-        song.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SongReview songReview = new SongReview();
-                FragmentManager manager = getFragmentManager();
-                manager.beginTransaction().replace(R.id.container,songReview).commit();
-            }
-        });
-
-
 
         return view;
 
     }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        adapter.notifyDataSetChanged();
+//        adapter.notifyItemRemoved(0);
+    }
 }

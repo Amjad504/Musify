@@ -42,11 +42,13 @@ public class sign_up extends AppCompatActivity {
     TextView Signup;
     EditText Name;
     EditText Email;
+    EditText number;
+    EditText pass;
     EditText Roll;
     String sessionId;
 
 
-    String name,email,Dp;
+    String name,email,Dp,Number,Pass;
 
 
     CircleImageView dp;
@@ -78,6 +80,9 @@ public class sign_up extends AppCompatActivity {
        dp = (CircleImageView) findViewById(R.id.dp);
         Name = (EditText) findViewById(R.id.name);
         Email = (EditText) findViewById(R.id.email);
+        number = (EditText) findViewById(R.id.number);
+        pass = (EditText) findViewById(R.id.password) ;
+
         // getting text from our edittext fields.
 
        dp.setOnClickListener(new View.OnClickListener() {
@@ -108,8 +113,10 @@ public class sign_up extends AppCompatActivity {
 
                 name = Name.getText().toString();
                 email = Email.getText().toString();
+                Number = ("+92"+number);
+                Pass = pass.getText().toString();
 
-                if( (TextUtils.isEmpty(name))  &&  (TextUtils.isEmpty(email)) ){
+                if( (TextUtils.isEmpty(name))  &&  (TextUtils.isEmpty(email)) &&  (TextUtils.isEmpty(Number))  &&  (TextUtils.isEmpty(Pass)) ){
                     Toast.makeText(sign_up.this, "Please add some data.", Toast.LENGTH_SHORT).show();
                 } else {
                     addDatatoFirebase();
@@ -129,10 +136,13 @@ public class sign_up extends AppCompatActivity {
         // getting text from our edittext fields.
         String name = Name.getText().toString();
         String email = Email.getText().toString();
+        String Num = ("+92"+number.getText().toString());
+        String Pass = pass.getText().toString();
 
 
 
-
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        String Id = currentUser.getUid();
         FirebaseStorage storage=FirebaseStorage.getInstance();
         final StorageReference uploader=storage.getReference("Image1"+new Random().nextInt(50));
 
@@ -149,8 +159,8 @@ public class sign_up extends AppCompatActivity {
                                 dialog.dismiss();
                                 FirebaseDatabase db=FirebaseDatabase.getInstance();
                                 DatabaseReference root=db.getReference("users");
-                                Profiledata obj=new Profiledata(uri.toString(),Name.getText().toString(),Email.getText().toString());
-                                root.push().setValue(obj);
+                                Profiledata obj=new Profiledata(uri.toString(),name,email,Num,Pass);
+                                root.child(Id).setValue(obj);
 
 //                                Name.setText("");
 //                                Email.setText("");

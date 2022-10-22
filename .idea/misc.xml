@@ -23,6 +23,7 @@
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/drawable/square_radio.xml" value="0.261" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/drawable/text_color.xml" value="0.106" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_add_playlist.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_download_music.xml" value="0.264" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_goo_book.xml" value="0.264" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_google.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_liked.xml" value="0.2" />
@@ -31,6 +32,7 @@
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_listen_later2.xml" value="0.2246376811594203" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_login_mail.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_music_list.xml" value="0.26875" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_mysong.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_phone_verification.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_record1.xml" value="0.25677083333333334" />
@@ -40,7 +42,7 @@
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_reg_mail.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_search.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_select_playlist.xml" value="0.25677083333333334" />
-        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_sign_up.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_signin.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_signup.xml" value="0.264" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_song_screen.xml" value="0.25677083333333334" />
@@ -48,9 +50,10 @@
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_song_title2.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_splash_screen.xml" value="0.21105072463768115" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/activity_upload_music.xml" value="0.2" />
+        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/artistrow.xml" value="0.2677083333333333" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_add.xml" value="0.1" />
-        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_add2.xml" value="0.25677083333333334" />
-        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_home.xml" value="0.152" />
+        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_add2.xml" value="0.26875" />
+        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_home.xml" value="0.176" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_like.xml" value="0.24270833333333333" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_like_songs.xml" value="0.2" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_liked_playlist.xml" value="0.25677083333333334" />
@@ -61,10 +64,13 @@
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_rreviewsong.xml" value="0.24270833333333333" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_searching.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_selecting__playlist.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_song__comment.xml" value="0.26875" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_song__display2.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_song_display.xml" value="0.264" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_song_review.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/nav_header.xml" value="0.176" />
+        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/plalistrow.xml" value="0.2677083333333333" />
+        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/prvrow.xml" value="0.2677083333333333" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/menu/bottom_navigation.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/menu/bottomnavmenu.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/menu/nav_menu.xml" value="0.264" />

@@ -21,8 +21,7 @@ public class AddPlaylist extends AppCompatActivity {
         add_playlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AddPlaylist.this,UploadMusic.class);
-                startActivity(intent);
+
             }
         });
     }

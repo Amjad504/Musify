@@ -7,15 +7,33 @@ public class Profiledata {
     String  dp;
     String name;
     String mail;
+    String number;
+    String pass;
 
-    public Profiledata(String dp, String name, String mail) {
+    public Profiledata(String dp, String name, String mail,String number,String pass) {
         this.dp = dp;
         this.name = name;
         this.mail = mail;
+        this.number = number;
+        this.pass = pass;
 
     }
 
+    public String getPass() {
+        return pass;
+    }
 
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
 
     public Profiledata() {
 

@@ -44,165 +44,31 @@
             android:textStyle="bold" />
 
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
                 android:orientation="horizontal">
 
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swiper2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="180dp"
-                    android:orientation="vertical"
-                    android:weightSum="1">
 
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.8"
-                        app:srcCompat="@drawable/playlist" />
-
-                    <TextView
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/PRV"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="0.2"
-                        android:text="Playlist1"
-                        android:textColor="@color/white" />
-                </LinearLayout>
+                        android:layout_height="match_parent" />
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="180dp"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical"
-                    android:weightSum="1">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_weight="0.8"
-                        app:srcCompat="@drawable/playlist" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="0.2"
-                        android:text="Playlist2"
-                        android:textColor="@color/white" />
-
-                </LinearLayout>
+            </RelativeLayout>
 
 
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="180dp"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical"
-                    android:weightSum="1">
 
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_weight="0.8"
-                        app:srcCompat="@drawable/playlist" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="0.2"
-                        android:text="Playlist3"
-                        android:textColor="@color/white" />
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="180dp"
-                    android:orientation="vertical"
-                    android:weightSum="1">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_weight="0.8"
-                        app:srcCompat="@drawable/playlist" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="0.2"
-                        android:text="Playlist4"
-                        android:textColor="@color/white" />
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="180dp"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical"
-                    android:weightSum="1">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_weight="0.8"
-                        app:srcCompat="@drawable/playlist" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="0.2"
-                        android:text="Playlist5"
-                        android:textColor="@color/white" />
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="180dp"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical"
-                    android:weightSum="1">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_weight="0.8"
-                        app:srcCompat="@drawable/playlist" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="0.2"
-                        android:text="Playlist6"
-                        android:textColor="@color/white" />
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-
-        </HorizontalScrollView>
 
         <TextView
             android:layout_width="wrap_content"
@@ -214,168 +80,44 @@
             android:textStyle="bold" />
 
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
                 android:orientation="horizontal">
 
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swiper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:id="@+id/song"
-                    android:layout_width="120dp"
-                    android:layout_height="180dp"
-                    android:orientation="vertical"
-                    android:weightSum="1">
-
-                    <ImageView
-
-                        android:layout_width="120dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_weight="0.8"
-                        app:srcCompat="@drawable/artist" />
-
-                    <TextView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="0.2"
-                        android:text="Artist1"
-                        android:textColor="@color/white" />
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:id="@+id/ARV"/>
 
 
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="180dp"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical"
-                    android:weightSum="1">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_weight="0.8"
-                        app:srcCompat="@drawable/artist" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="0.2"
-                        android:text="Artist2"
-                        android:textColor="@color/white" />
-
-                </LinearLayout>
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="180dp"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical"
-                    android:weightSum="1">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_weight="0.8"
-                        app:srcCompat="@drawable/artist" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="0.2"
-                        android:text="Artist3"
-                        android:textColor="@color/white" />
-
-                </LinearLayout>
 
 
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="180dp"
-                    android:orientation="vertical"
-                    android:weightSum="1">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_weight="0.8"
-                        app:srcCompat="@drawable/artist" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="0.2"
-                        android:text="Artist4"
-                        android:textColor="@color/white" />
-                </LinearLayout>
 
 
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="180dp"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical"
-                    android:weightSum="1">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_weight="0.8"
-                        app:srcCompat="@drawable/artist" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="0.2"
-                        android:text="Artist5"
-                        android:textColor="@color/white" />
-
-                </LinearLayout>
 
 
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="180dp"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical"
-                    android:weightSum="1">
 
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_weight="0.8"
-                        app:srcCompat="@drawable/artist" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_weight="0.2"
-                        android:text="Artist6"
-                        android:textColor="@color/white" />
 
-                </LinearLayout>
+
+
 
 
             </LinearLayout>
 
 
-        </HorizontalScrollView>
+
 
     </LinearLayout>
 

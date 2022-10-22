@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:layout_marginTop="-10dp"
+            android:layout_marginTop="-20dp"
             android:paddingLeft="10dp"
             android:text="Musify"
             android:textColor="#FFFFFF"
@@ -45,6 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="-40dp"
             android:gravity="center">
 
 
@@ -71,16 +72,31 @@
                 android:padding="15dp"
                 android:textColor="#DCB439"
                 android:textColorHint="#DCB439"
-                android:layout_marginTop="20dp"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
 
             <EditText
+                android:id="@+id/number"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn2"
+                android:ems="10"
+                android:hint="Enter your Number"
+                android:inputType="phone"
+                android:padding="15dp"
+                android:textColor="#DCB439"
+                android:textColorHint="#DCB439"
+                android:textSize="20dp"
+                android:maxLength="10"
+                android:textStyle="bold" />
+
+            <EditText
                 android:id="@+id/email"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/btn2"
                 android:ems="10"
                 android:hint="Enter your Email"
@@ -92,11 +108,29 @@
                 android:textStyle="bold" />
 
 
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn2"
+                android:ems="10"
+                android:hint="Enter Password"
+                android:inputType="numberPassword"
+                android:padding="15dp"
+                android:textColor="#DCB439"
+                android:textColorHint="#DCB439"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+
+
             <TextView
                 android:id="@+id/Signup"
                 android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/btn_bg"
                 android:hint="Sign Up"
                 android:gravity="center"

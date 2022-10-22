@@ -27,7 +27,7 @@ public class SplashScreen extends AppCompatActivity {
 
             }
                 finally{
-                    Intent intent = new Intent(SplashScreen.this , loginMail.class);
+                    Intent intent = new Intent(SplashScreen.this , PhoneVerification.class);
                     startActivity(intent);
 
 
