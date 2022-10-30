@@ -16,9 +16,11 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Handler;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,9 +30,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -39,11 +38,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.checkerframework.checker.units.qual.A;
-
 import java.io.IOException;
-import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -54,7 +49,7 @@ public class SongDisplay extends Fragment implements playable{
 
 
     TextView title, artist, Duration, currDuration;
-    ImageView songDp, playbtn, pauseBtn, back, next, delete;
+    ImageView songDp, playbtn, pauseBtn, back, next, delete, LikedSongs,LaterSongs;
     SeekBar musicbar,volumebar;
     MediaPlayer mediaPlayer;
     AudioManager audioManager;
@@ -64,6 +59,7 @@ public class SongDisplay extends Fragment implements playable{
     String value, getValue;
     String SongID;
     List ls,tracks;
+
 
     Uri uri;
     int pos;
@@ -90,9 +86,12 @@ public class SongDisplay extends Fragment implements playable{
 
 
 
+
         LinearLayout fav = (LinearLayout) view.findViewById(R.id.favdown);
         ImageView resume = (ImageView) view.findViewById(R.id.play);
         ImageView pause = (ImageView) view.findViewById(R.id.pause);
+        LikedSongs = view.findViewById(R.id.likedSONGS);
+        LaterSongs = view.findViewById(R.id.LaterSONG);
 
         getActivity().setVolumeControlStream(AudioManager.STREAM_MUSIC);
         ls = ((MyApplication) getActivity().getApplication()).getLs();
@@ -111,6 +110,15 @@ public class SongDisplay extends Fragment implements playable{
         Duration = view.findViewById(R.id.Duration);
         currDuration = view.findViewById(R.id.currDuration);
         delete = view.findViewById(R.id.delete);
+
+
+
+
+
+
+
+
+
 
 
 
@@ -186,7 +194,41 @@ public class SongDisplay extends Fragment implements playable{
             }
         });
 
+        LikedSongs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Add_LikedSongs(SongID);
+
+            }
+        });
+        LaterSongs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Add_LaterSongs(SongID);
+            }
+        });
+
         return view;
+    }
+
+    private void Add_LaterSongs(String songID) {
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        String Id = currentUser.getUid();
+        FirebaseDatabase db=FirebaseDatabase.getInstance();
+        DatabaseReference root=db.getReference().child("Songs").child(Id).child(songID);
+        root.child("ListenLater").setValue("true");
+        Toast.makeText(getActivity(), "Data Added Successfully", Toast.LENGTH_SHORT).show();
+    }
+
+    private void Add_LikedSongs(String songID) {
+
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        String Id = currentUser.getUid();
+        FirebaseDatabase db=FirebaseDatabase.getInstance();
+        DatabaseReference root=db.getReference().child("Songs").child(Id).child(songID);
+        root.child("Liked").setValue("true");
+        Toast.makeText(getActivity(), "Data Liked Successfully", Toast.LENGTH_SHORT).show();
     }
 
     private void creteChannel() {

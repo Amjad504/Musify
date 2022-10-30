@@ -185,47 +185,50 @@
 
     <LinearLayout
         android:id="@+id/favdown"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="590dp"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:id="@+id/likedSONGS"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
             app:srcCompat="@drawable/heart"/>
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="-5dp"
-            android:layout_marginStart="30dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="15dp"
             app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
 
         <ImageView
             android:id="@+id/delete"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="30dp"
-            app:srcCompat="@drawable/ic_baseline_delete_forever_24"
-            android:layout_marginTop="-10dp"/>
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
 
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="40dp"
-            app:srcCompat="@drawable/ic_baseline_message_24"
-            android:layout_marginTop="-10dp"/>
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            app:srcCompat="@drawable/ic_baseline_message_24" />
 
 
         <ImageView
+            android:id="@+id/LaterSONG"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            app:srcCompat="@drawable/ic_baseline_more_vert_24"
-            android:layout_marginTop="-10dp"/>
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            app:srcCompat="@drawable/ic_baseline_watch_later_24" />
 
 
 

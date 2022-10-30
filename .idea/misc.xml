@@ -55,7 +55,7 @@
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_add2.xml" value="0.26875" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_home.xml" value="0.176" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_like.xml" value="0.24270833333333333" />
-        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_like_songs.xml" value="0.2" />
+        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_like_songs.xml" value="0.264" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_liked_playlist.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_listen.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_listen2.xml" value="0.25677083333333334" />
@@ -66,8 +66,9 @@
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_selecting__playlist.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_song__comment.xml" value="0.26875" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_song__display2.xml" value="0.25677083333333334" />
-        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_song_display.xml" value="0.264" />
+        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_song_display.xml" value="0.26875" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/fragment_song_review.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/likedrecycler.xml" value="0.2677083333333333" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/nav_header.xml" value="0.176" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/plalistrow.xml" value="0.2677083333333333" />
         <entry key="..\:/Users/amjad/AndroidStudioProjects/I190504/app/src/main/res/layout/prvrow.xml" value="0.2677083333333333" />

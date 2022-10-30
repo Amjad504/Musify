@@ -46,12 +46,6 @@
             android:name=".Liked"
             android:exported="false" />
         <activity
-            android:name=".Listen_later2"
-            android:exported="false" />
-        <activity
-            android:name=".LIsten_Later"
-            android:exported="false" />
-        <activity
             android:name=".Search"
             android:exported="false" />
         <activity

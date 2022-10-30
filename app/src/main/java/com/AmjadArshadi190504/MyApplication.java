@@ -7,11 +7,24 @@ import java.util.List;
 
 
 public class MyApplication extends Application {
-    
+
+    List<LikedSong>  LS;
+
+
     List<SongModel> ls;
+
+    public List<LikedSong> getLS() {
+        return LS;
+    }
+
+    public void setLS(List<LikedSong> LS) {
+        this.LS = LS;
+    }
+
     public MyApplication()
     {
         ls  = new ArrayList<SongModel>();
+        LS = new ArrayList<LikedSong>();
     }
 
 
